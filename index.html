@@ -1,0 +1,99 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+        }
+        .quote_section, .controls_section {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .quote_section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #quoteBox {
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .controls_section {
+            flex: 0.3;
+            margin-left: 20px;
+        }
+        .controls_section label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="color"], input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="quote_section">
+            <div id="quoteBox">
+                <p id="quoteText">You can generate your own quotes here....!</p>
+            </div>
+        </div>
+
+        <div class="controls_section">
+            
+            <textarea id="userQuote" placeholder="Type your quote here..." rows="4" cols="50" onchange="setUserQuote()"></textarea>
+            
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" onchange="applyStyle()">
+            
+            <label for="fgColor">Text Color:</label>
+            <input type="color" id="fgColor" onchange="applyStyle()">
+            
+            <label for="fontSize">Font Size (px):</label>
+            <input type="number" id="fontSize" min="10" max="50" value="16" onchange="applyStyle()">
+            
+            <label for="width">Card Width (px):</label>
+            <input type="number" id="width" min="100" max="800" value="300" onchange="applyStyle()">
+            
+            <label for="height">Card Height (px):</label>
+            <input type="number" id="height" min="100" max="500" value="200" onchange="applyStyle()">
+        </div>
+    </div>
+
+    <script src="src.js">
+       
+       
+    </script>
+</body>
+</html>
